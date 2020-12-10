@@ -1,0 +1,6 @@
+D:\Прога\GunShopProject\GunShop.Domain.Core\bin\Debug\GunShop.Domain.Core.dll
+D:\Прога\GunShopProject\GunShop.Domain.Core\bin\Debug\GunShop.Domain.Core.pdb
+D:\Прога\GunShopProject\GunShop.Domain.Core\obj\Debug\GunShop.Domain.Core.csprojAssemblyReference.cache
+D:\Прога\GunShopProject\GunShop.Domain.Core\obj\Debug\GunShop.Domain.Core.csproj.CoreCompileInputs.cache
+D:\Прога\GunShopProject\GunShop.Domain.Core\obj\Debug\GunShop.Domain.Core.dll
+D:\Прога\GunShopProject\GunShop.Domain.Core\obj\Debug\GunShop.Domain.Core.pdb

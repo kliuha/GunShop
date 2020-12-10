@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<ArrayOfGun>
+  <Gun>
+    <Id>1</Id>
+    <Type>Automatic rifles</Type>
+    <Price>300</Price>
+     <Id>2</Id>
+    <Type>Sniper rifles</Type>
+    <Price>450</Price>
+</ArrayOfGun>

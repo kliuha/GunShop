@@ -1,0 +1,11 @@
+D:\Прога\GunShopProject\GunShop.Infrastructure.Bussiness\bin\Debug\GunShop.Infrastructure.Bussiness.dll
+D:\Прога\GunShopProject\GunShop.Infrastructure.Bussiness\bin\Debug\GunShop.Infrastructure.Bussiness.pdb
+D:\Прога\GunShopProject\GunShop.Infrastructure.Bussiness\bin\Debug\GunShop.Domain.Core.dll
+D:\Прога\GunShopProject\GunShop.Infrastructure.Bussiness\bin\Debug\GunShop.Services.Interfaces.dll
+D:\Прога\GunShopProject\GunShop.Infrastructure.Bussiness\bin\Debug\GunShop.Domain.Core.pdb
+D:\Прога\GunShopProject\GunShop.Infrastructure.Bussiness\bin\Debug\GunShop.Services.Interfaces.pdb
+D:\Прога\GunShopProject\GunShop.Infrastructure.Bussiness\obj\Debug\GunShop.Infrastructure.Bussiness.csprojAssemblyReference.cache
+D:\Прога\GunShopProject\GunShop.Infrastructure.Bussiness\obj\Debug\GunShop.Infrastructure.Bussiness.csproj.CoreCompileInputs.cache
+D:\Прога\GunShopProject\GunShop.Infrastructure.Bussiness\obj\Debug\GunShop.Infrastructure.Bussiness.csproj.CopyComplete
+D:\Прога\GunShopProject\GunShop.Infrastructure.Bussiness\obj\Debug\GunShop.Infrastructure.Bussiness.dll
+D:\Прога\GunShopProject\GunShop.Infrastructure.Bussiness\obj\Debug\GunShop.Infrastructure.Bussiness.pdb

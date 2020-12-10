@@ -1,0 +1,18 @@
+﻿@model GunShop.Models.IndexPageViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Available guns</h2>
+@foreach (var gun in Model.Guns)
+{
+    <a href="@Url.Action("Gun",new {id = gun.Value.Id})">@gun.Value.Type </a>
+    <br />
+}
+
+
+
+
+
+
