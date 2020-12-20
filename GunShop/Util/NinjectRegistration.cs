@@ -33,7 +33,7 @@ using Ninject.Web.Common;
         {
             bootstrapper.ShutDown();
         }
-        public static IKernel KernelInstance;
+        public static new IKernel KernelInstance;
         public override void Load()
         {
             

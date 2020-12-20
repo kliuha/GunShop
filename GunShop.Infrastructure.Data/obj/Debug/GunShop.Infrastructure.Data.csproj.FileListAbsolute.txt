@@ -14,5 +14,5 @@ D:\Прога\GunShopProject\GunShop.Infrastructure.Data\bin\Debug\EntityFramewo
 D:\Прога\GunShopProject\GunShop.Infrastructure.Data\bin\Debug\EntityFramework.SqlServer.dll
 D:\Прога\GunShopProject\GunShop.Infrastructure.Data\bin\Debug\EntityFramework.xml
 D:\Прога\GunShopProject\GunShop.Infrastructure.Data\bin\Debug\EntityFramework.SqlServer.xml
-D:\Прога\GunShopProject\GunShop.Infrastructure.Data\obj\Debug\GunShop.Infrastructure.Data.Migrations._1.resources
+D:\Прога\GunShopProject\GunShop.Infrastructure.Data\obj\Debug\GunShop.Infrastructure.Data.Migrations.DbV1.resources
 D:\Прога\GunShopProject\GunShop.Infrastructure.Data\obj\Debug\GunShop.Infrastructure.Data.csproj.GenerateResource.cache

@@ -13,7 +13,7 @@ namespace GunShop.Infrastructure.Data
     {
         public OrderContext() : base("GunShop")
         {
-            Database.SetInitializer(new MigrateDatabaseToLatestVersion<OrderContext, Migrations.Configuration>());
+                Database.SetInitializer(new MigrateDatabaseToLatestVersion<OrderContext, Migrations.Configuration>());
         }
         public DbSet<Gun> Guns { get; set; }
         public DbSet<Ammunition> Ammunitions { get; set; }
