@@ -20,9 +20,8 @@ namespace GunShop
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
             //// внедрение зависимостей
-            NinjectModule registrations = new NinjectRegistration();
-            var kernel = new StandardKernel(registrations);
-            DependencyResolver.SetResolver(new NinjectDependencyResolver(kernel));
+           
+           
         }
     }
 }

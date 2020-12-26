@@ -29,6 +29,8 @@ namespace GunShop.Infrastructure.Data
 
             modelBuilder.Entity<Order>().HasMany(x => x.PriceComponents).WithRequired(x => x.Order);
 
+            modelBuilder.Entity<Warehouse>().HasMany(x => x.Guns).WithRequired(x => x.Warehouses);
+
         }
     }
 }

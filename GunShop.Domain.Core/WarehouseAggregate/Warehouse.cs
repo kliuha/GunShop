@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace GunShop.Domain.Core
 {
-    public class Gun
+    public class Warehouse
     {
         public int Id { get; set; }
-        public string Type { get; set; }
-        public decimal Price { get; set; }
-        public List<Ammunition> Ammunitions { get; set; }
+        public string Name { get; set; }    
+        public string Address { get; set; }
+
+        public List<Gun> Guns { get; set; }
+
     }
 }

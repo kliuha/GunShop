@@ -9,27 +9,50 @@ using GunShop.Infrastructure.Bussiness;
 using GunShop.Infrastructure.Data;
 using GunShop.Services.Interfaces;
 using Ninject.Web.Common;
- using Microsoft.Web.Infrastructure.DynamicModuleHelper;
-    using Ninject;
-    using Ninject.Web.Common.WebHost;
+using Microsoft.Web.Infrastructure.DynamicModuleHelper;
+using Ninject;
+using Ninject.Web.Common.WebHost;
+    using System;
+    using System.Web;
 
     public class NinjectRegistration : NinjectModule
     {
         private static readonly Bootstrapper bootstrapper = new Bootstrapper();
         public static void Start()
         {
-            DynamicModuleUtility.RegisterModule(typeof(NinjectHttpModule));
-            var kernel = new StandardKernel();
-            KernelInstance = kernel;
-            kernel.Bind<IGunRepository>().To<GunRepository>();
-            kernel.Bind<IPriceCalculation>().To<PriceCalculation>();
-           
+            DynamicModuleUtility.RegisterModule(typeof(NinjectHttpModule));                                
+            DynamicModuleUtility.RegisterModule(typeof(OnePerRequestHttpModule));
+            bootstrapper.Initialize(CreateKernel);
         }
+       
+    private static IKernel CreateKernel()
+                {
+                    var kernel = new StandardKernel();
 
-        /// <summary>
-        /// Stops the application.
-        /// </summary>
-        public static void Stop()
+                    KernelInstance = kernel;
+
+                    try
+                    {
+                        kernel.Bind<Func<IKernel>>().ToMethod(ctx => () => new Bootstrapper().Kernel);
+                        kernel.Bind<IHttpModule>().To<HttpApplicationInitializationHttpModule>();
+
+                         kernel.Bind<IGunRepository>().To<GunRepository>();
+             kernel.Bind<IPriceCalculation>().To<PriceCalculation>();
+            kernel.Bind<IOrderRepository>().To<OrderRepository>();
+                        return kernel;
+                    }
+
+                    catch
+                    {
+                        kernel.Dispose();
+                        throw;
+                    }
+                }
+
+                /// <summary>
+                /// Stops the application.
+                /// </summary>
+                public static void Stop()
         {
             bootstrapper.ShutDown();
         }
