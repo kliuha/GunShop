@@ -11,5 +11,7 @@ namespace GunShop.Services.Interfaces
     {
         void Create(Order order);
         Order Get(int id);
+        List<Order> GetAllOrders();
+
     }
 }

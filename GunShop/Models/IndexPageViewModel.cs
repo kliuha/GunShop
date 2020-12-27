@@ -10,7 +10,12 @@ namespace GunShop.Models
 {
     public class IndexPageViewModel
     {
+        
+
+        public Gun _Gun { get; set; }
         public List<Gun> Gun { get; set; }
         public Dictionary<int,Gun > Guns { get; set; }
+        public Dictionary<int, Warehouse> Ware { get; set; }
+
     }
 }

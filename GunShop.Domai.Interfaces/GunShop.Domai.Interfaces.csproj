@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="IGunRepository.cs" />
     <Compile Include="IOrderRepository.cs" />
+    <Compile Include="IWarehouseRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

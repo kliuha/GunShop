@@ -12,6 +12,7 @@ namespace GunShop.Domai.Interfaces
         List<Gun> GetAllGuns();
         Gun GetGun(int id);
         void Create(Gun gun);
-        
+        void Remove(Gun gun);
+        List<Gun> SelectionByWarehouse(int id);
     }
 }

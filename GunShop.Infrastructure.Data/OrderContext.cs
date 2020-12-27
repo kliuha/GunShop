@@ -20,6 +20,7 @@ namespace GunShop.Infrastructure.Data
         public DbSet<Order> Orders { get; set; }
 
         public DbSet<PriceComponent> PriceComponents { get; set; }
+        public DbSet<Warehouse> Warehouses { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -29,7 +30,7 @@ namespace GunShop.Infrastructure.Data
 
             modelBuilder.Entity<Order>().HasMany(x => x.PriceComponents).WithRequired(x => x.Order);
 
-            modelBuilder.Entity<Warehouse>().HasMany(x => x.Guns).WithRequired(x => x.Warehouses);
+            modelBuilder.Entity<Warehouse>();
 
         }
     }

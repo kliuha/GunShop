@@ -9,9 +9,9 @@ namespace GunShop.Domain.Core
    public class Order
     {
         public int Id { get; set; }
+        public int GunId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public List<PriceComponent> PriceComponents { get; set; }
-        public DateTime CreatedDate { get; set; }
+        public List<PriceComponent> PriceComponents { get; set; }     
     }
 }

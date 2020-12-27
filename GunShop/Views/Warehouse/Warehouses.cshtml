@@ -1,0 +1,19 @@
+﻿@model GunShop.Models.IndexPageViewModel
+
+@{
+    ViewBag.Title = "Warehouses";
+}
+
+<h2>Available warehouses</h2>
+@foreach (var ware in Model.Ware)
+{
+    <h>@ware.Value.Name </h>
+    @Html.ActionLink("Choose", "WarehouseGuns", new { id = ware.Value.Id })
+    <br />
+}
+
+
+
+
+
+

@@ -11,17 +11,29 @@ namespace GunShop.Infrastructure.Data
     public class OrderRepository : IOrderRepository
     {
         private OrderContext db;
+        
         public OrderRepository()
         {
             this.db = new OrderContext();
         }
         public void Create(Order order)
         {
-            db.Orders.Add(order);
+            using (var ctx = new OrderContext())
+            {
+                ctx.Orders.Add(order);
+
+                ctx.SaveChanges();
+            }
         }
         public Order Get(int id)
         {
             return db.Orders.Find(id);
+           
+        }
+        public List<Order> GetAllOrders()
+        {
+            return db.Orders.ToList();
+           
         }
     }
 }

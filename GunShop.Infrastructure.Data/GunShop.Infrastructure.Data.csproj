@@ -60,10 +60,23 @@
     <Compile Include="Migrations\202012231037364_DbV2.designer.cs">
       <DependentUpon>202012231037364_DbV2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202012271247193_DbV3.cs" />
+    <Compile Include="Migrations\202012271247193_DbV3.designer.cs">
+      <DependentUpon>202012271247193_DbV3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012271349195_DbV4.cs" />
+    <Compile Include="Migrations\202012271349195_DbV4.designer.cs">
+      <DependentUpon>202012271349195_DbV4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012271409092_DbV5.cs" />
+    <Compile Include="Migrations\202012271409092_DbV5.designer.cs">
+      <DependentUpon>202012271409092_DbV5.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="OrderContext.cs" />
     <Compile Include="OrderRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WarehouseRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GunShop.Domai.Interfaces\GunShop.Domai.Interfaces.csproj">
@@ -85,6 +98,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202012231037364_DbV2.resx">
       <DependentUpon>202012231037364_DbV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012271247193_DbV3.resx">
+      <DependentUpon>202012271247193_DbV3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012271349195_DbV4.resx">
+      <DependentUpon>202012271349195_DbV4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012271409092_DbV5.resx">
+      <DependentUpon>202012271409092_DbV5.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

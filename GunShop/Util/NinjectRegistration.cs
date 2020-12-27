@@ -36,9 +36,10 @@ using Ninject.Web.Common.WebHost;
                         kernel.Bind<Func<IKernel>>().ToMethod(ctx => () => new Bootstrapper().Kernel);
                         kernel.Bind<IHttpModule>().To<HttpApplicationInitializationHttpModule>();
 
-                         kernel.Bind<IGunRepository>().To<GunRepository>();
-             kernel.Bind<IPriceCalculation>().To<PriceCalculation>();
-            kernel.Bind<IOrderRepository>().To<OrderRepository>();
+                        kernel.Bind<IGunRepository>().To<GunRepository>();
+                        kernel.Bind<IPriceCalculation>().To<PriceCalculation>();
+                        kernel.Bind<IOrderRepository>().To<OrderRepository>();
+                        kernel.Bind<IWarehouseRepository>().To<WarehouseRepository>();
                         return kernel;
                     }
 

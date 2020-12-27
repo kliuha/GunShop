@@ -10,34 +10,34 @@ namespace GunShop.Infrastructure.Bussiness
 {
     public class PriceCalculation : IPriceCalculation
     {
-        List<IPriceCalculation> _priceCalculationStrategies;
+       
 
-            public PriceCalculation(List<IPriceCalculation> priceCalculationStrategies)
+            public PriceCalculation()
             {
-                _priceCalculationStrategies = priceCalculationStrategies;
+                
             }
-       public List<Gun> CalculatePrice(Gun gun)
+       public Decimal CalculatePrice(Gun gun)
         {
 
-            List<Gun> components = null;
+            //List<Gun> components = null;
             
 
-            foreach (IPriceCalculation priceCalculationStrategy in _priceCalculationStrategies)
-            {
-                var price = priceCalculationStrategy.CalculatePrice(gun);
-                if (price != null)
-                {
-                    if (components == null)
-                    {
-                        components = price;
-                    }
-                    else
-                    {
-                        components.AddRange(price);
-                    }
-                }
-            }
-            return components;
+            //foreach (IPriceCalculation priceCalculationStrategy in _priceCalculationStrategies)
+            //{
+            //    var price = priceCalculationStrategy.CalculatePrice(gun);
+            //    if (price != null)
+            //    {
+            //        if (components == null)
+            //        {
+            //            components = price;
+            //        }
+            //        else
+            //        {
+            //            components.AddRange(price);
+            //        }
+            //    }
+            //}
+            return gun.Price;
         }
     }
 }

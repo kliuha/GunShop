@@ -12,7 +12,7 @@ namespace GunShop.Domain.Core
         public string Name { get; set; }    
         public string Address { get; set; }
 
-        public List<Gun> Guns { get; set; }
+     
 
     }
 }

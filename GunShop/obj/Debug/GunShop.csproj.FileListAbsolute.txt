@@ -87,3 +87,5 @@ D:\Прога\GunShopProject\GunShop\bin\System.Web.Http.xml
 D:\Прога\GunShopProject\GunShop\bin\EntityFramework.dll
 D:\Прога\GunShopProject\GunShop\bin\GunShop.Infrastructure.Data.dll.config
 D:\Прога\GunShopProject\GunShop\bin\EntityFramework.xml
+D:\Прога\GunShopProject\GunShop\bin\EntityFramework.SqlServer.dll
+D:\Прога\GunShopProject\GunShop\bin\EntityFramework.SqlServer.xml

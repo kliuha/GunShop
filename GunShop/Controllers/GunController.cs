@@ -14,10 +14,12 @@ namespace GunShop.Controllers
     {
         private IGunRepository repo;
         private IPriceCalculation price;
-        public GunController(IGunRepository r, IPriceCalculation p)
+        private IOrderRepository order;
+        public GunController(IGunRepository r, IPriceCalculation p,IOrderRepository o)
         {
             repo = r;
             price = p;
+            order = o;
         }
         public ActionResult Index()
         {
@@ -28,13 +30,35 @@ namespace GunShop.Controllers
             };
             return View(model);
         }
-
-        public ActionResult Buy(int id)
+        public ActionResult Contact()
         {
-            Gun gun = repo.GetGun(id);
-            price.CalculatePrice(gun);
             return View();
         }
+        
+        public ActionResult GunPage(int Id)
+        {
+            var model = new IndexPageViewModel()
+            {
+
+                _Gun = repo.GetGun(Id)
+
+            };
+            model._Gun.Price = price.CalculatePrice(model._Gun);
+            return View(model);
+        }
+        public ActionResult BuyGun(BuyModel model)
+        {
+            var order = new Order();
+            order.FirstName = model.FirstName;
+            order.LastName = model.LastName;
+            order.GunId = model.GunId;
+            this.order.Create(order);
+            Gun gun = repo.GetGun(model.GunId);
+            //price.CalculatePrice(gun);
+            repo.Remove(gun);
+            return RedirectToAction("Index", "Gun");
+        }
+       
        
     }
 }

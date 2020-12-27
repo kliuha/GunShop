@@ -17,3 +17,6 @@ D:\Прога\GunShopProject\GunShop.Infrastructure.Data\bin\Debug\EntityFramewo
 D:\Прога\GunShopProject\GunShop.Infrastructure.Data\obj\Debug\GunShop.Infrastructure.Data.Migrations.DbV1.resources
 D:\Прога\GunShopProject\GunShop.Infrastructure.Data\obj\Debug\GunShop.Infrastructure.Data.csproj.GenerateResource.cache
 D:\Прога\GunShopProject\GunShop.Infrastructure.Data\obj\Debug\GunShop.Infrastructure.Data.Migrations.DbV2.resources
+D:\Прога\GunShopProject\GunShop.Infrastructure.Data\obj\Debug\GunShop.Infrastructure.Data.Migrations.DbV3.resources
+D:\Прога\GunShopProject\GunShop.Infrastructure.Data\obj\Debug\GunShop.Infrastructure.Data.Migrations.DbV4.resources
+D:\Прога\GunShopProject\GunShop.Infrastructure.Data\obj\Debug\GunShop.Infrastructure.Data.Migrations.DbV5.resources

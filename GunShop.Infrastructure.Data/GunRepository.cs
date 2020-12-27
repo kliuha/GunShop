@@ -30,7 +30,21 @@ namespace GunShop.Infrastructure.Data
         public void Create(Gun gun)
         {
             db.Guns.Add(gun);
+            db.SaveChanges();
         }
-       
+        public void Remove(Gun gun)
+        {
+            db.Guns.Remove(gun);
+            db.SaveChanges();
+        }
+        public List<Gun> SelectionByWarehouse(int warehouseid)
+        {
+            var guns = db.Guns.Where(x => x.WarehousesId == warehouseid);
+
+            return guns.ToList();
+
+            
+        }
+
     }
 }

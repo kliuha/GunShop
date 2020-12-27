@@ -7,7 +7,8 @@
 <h2>Available guns</h2>
 @foreach (var gun in Model.Guns)
 {
-    <a href="@Url.Action("Gun",new {id = gun.Value.Id})">@gun.Value.Type </a>
+    <h>@gun.Value.Type </h>
+    @Html.ActionLink("Buy", "GunPage", new { id = gun.Value.Id })
     <br />
 }
 

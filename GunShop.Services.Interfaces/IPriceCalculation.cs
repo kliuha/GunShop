@@ -9,6 +9,6 @@ namespace GunShop.Services.Interfaces
 {
     public interface IPriceCalculation
     {
-        List<Gun> CalculatePrice(Gun gun);
+        Decimal CalculatePrice(Gun gun);
     }
 }
