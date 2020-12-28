@@ -53,8 +53,7 @@ namespace GunShop.Controllers
             order.LastName = model.LastName;
             order.GunId = model.GunId;
             this.order.Create(order);
-            Gun gun = repo.GetGun(model.GunId);
-            //price.CalculatePrice(gun);
+            Gun gun = repo.GetGun(model.GunId);         
             repo.Remove(gun);
             return RedirectToAction("Index", "Gun");
         }
