@@ -3,15 +3,45 @@
 @{
     ViewBag.Title = "Index";
 }
+    <head>
+        <script type = "text/javascript">
+            function SearchScript() {
+                var input, filter, ul, li, a, i;
+                input = document.getElementById("mySearch");
+                filter = input.value.toUpperCase();
+                ul = document.getElementById("myMenu");
+                li = ul.getElementsByTagName("li");
+                for (i = 0; i < li.length; i++) {
+                    a = li[i].getElementsByTagName("a")[0];
+                    if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                        li[i].style.display = "";
+                    } else {
+                        li[i].style.display = "none";
+                    }
+                }
+            }
+</script>
+    </head>
 
-<h2>Available guns</h2>
-@foreach (var gun in Model.Guns)
-{
-    <h>@gun.Value.Type </h>
-    @Html.ActionLink("Buy", "GunPage", new { id = gun.Value.Id })
-    <br />
-}
+    <body>
+        <h2>Available guns</h2>
+        <input type="text" id="mySearch" onkeyup="SearchScript()" placeholder="Search.." title="Type in a category">
+        <ul id="myMenu">
+            <li><a href="@Url.Action("Warehouses","Warehouse")">Warehouses</a></li>
+            <li><a href="@Url.Action("Index","Gun")">Guns</a></li>
+            <li><a href="@Url.Action("Contact","Gun")">Contact</a></li>
 
+        </ul>
+        <link rel="stylesheet" href="~/Content/Search.css">
+
+        @foreach (var gun in Model.Guns)
+        {
+            <h>@gun.Value.Type </h>
+            @Html.ActionLink("Buy", "GunPage", new { id = gun.Value.Id })
+            <br />
+        }
+    </body>
+       
 
 
 
