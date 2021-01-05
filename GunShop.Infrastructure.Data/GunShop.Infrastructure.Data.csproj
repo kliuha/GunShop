@@ -72,6 +72,22 @@
     <Compile Include="Migrations\202012271409092_DbV5.designer.cs">
       <DependentUpon>202012271409092_DbV5.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202012301034268_DbV6.cs" />
+    <Compile Include="Migrations\202012301034268_DbV6.designer.cs">
+      <DependentUpon>202012301034268_DbV6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101030926253_DbV7.cs" />
+    <Compile Include="Migrations\202101030926253_DbV7.designer.cs">
+      <DependentUpon>202101030926253_DbV7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101032123110_DbV8.cs" />
+    <Compile Include="Migrations\202101032123110_DbV8.designer.cs">
+      <DependentUpon>202101032123110_DbV8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101042230521_DbV9.cs" />
+    <Compile Include="Migrations\202101042230521_DbV9.designer.cs">
+      <DependentUpon>202101042230521_DbV9.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="OrderContext.cs" />
     <Compile Include="OrderRepository.cs" />
@@ -107,6 +123,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202012271409092_DbV5.resx">
       <DependentUpon>202012271409092_DbV5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012301034268_DbV6.resx">
+      <DependentUpon>202012301034268_DbV6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101030926253_DbV7.resx">
+      <DependentUpon>202101030926253_DbV7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101032123110_DbV8.resx">
+      <DependentUpon>202101032123110_DbV8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101042230521_DbV9.resx">
+      <DependentUpon>202101042230521_DbV9.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

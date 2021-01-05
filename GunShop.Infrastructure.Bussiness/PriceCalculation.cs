@@ -1,4 +1,6 @@
-﻿using GunShop.Domain.Core;
+﻿using GunShop.Domai.Interfaces;
+using GunShop.Domain.Core;
+using GunShop.Domain.Core.OrderAggregate;
 using GunShop.Services.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -10,34 +12,39 @@ namespace GunShop.Infrastructure.Bussiness
 {
     public class PriceCalculation : IPriceCalculation
     {
-       
 
-            public PriceCalculation()
-            {
-                
-            }
-       public Decimal CalculatePrice(Gun gun)
+        private IGunRepository _gunRepository;
+        public PriceCalculation(IGunRepository gunRepository)
         {
 
-            //List<Gun> components = null;
-            
-
-            //foreach (IPriceCalculation priceCalculationStrategy in _priceCalculationStrategies)
-            //{
-            //    var price = priceCalculationStrategy.CalculatePrice(gun);
-            //    if (price != null)
-            //    {
-            //        if (components == null)
-            //        {
-            //            components = price;
-            //        }
-            //        else
-            //        {
-            //            components.AddRange(price);
-            //        }
-            //    }
-            //}
+            _gunRepository = gunRepository;
+        }
+        public Decimal CalculatePrice(Gun gun)
+        {
             return gun.Price;
+        }
+
+        public List<PriceComponent> CalculatePrices(PriceCalculationParameters parameters)
+        {
+
+            var gun = _gunRepository.GetPrice(parameters.gun.Price);            
+
+            var newPriceComponents = new List<PriceComponent>();
+
+            if (parameters.Tracer == true)
+            {
+                newPriceComponents.Add(new PriceComponent { Name = "Tracet", Value = 100 });
+            }
+            if (parameters.Hollowpoint == true)
+            {
+                newPriceComponents.Add(new PriceComponent { Name = "Hollowpoint", Value = 110 });
+            }
+
+            if (parameters.Incendiary == true )
+            {
+                newPriceComponents.Add(new PriceComponent { Name = "Incendiary", Value = 120 });
+            }
+            return newPriceComponents;
         }
     }
 }

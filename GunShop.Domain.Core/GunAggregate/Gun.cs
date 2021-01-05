@@ -13,6 +13,7 @@ namespace GunShop.Domain.Core
         public decimal Price { get; set; }
         public List<Ammunition> Ammunitions { get; set; }
         public int WarehousesId { get; set; }
+        public int InStock { get; set; }
         
         
 

@@ -20,3 +20,7 @@ D:\Прога\GunShopProject\GunShop.Infrastructure.Data\obj\Debug\GunShop.Infra
 D:\Прога\GunShopProject\GunShop.Infrastructure.Data\obj\Debug\GunShop.Infrastructure.Data.Migrations.DbV3.resources
 D:\Прога\GunShopProject\GunShop.Infrastructure.Data\obj\Debug\GunShop.Infrastructure.Data.Migrations.DbV4.resources
 D:\Прога\GunShopProject\GunShop.Infrastructure.Data\obj\Debug\GunShop.Infrastructure.Data.Migrations.DbV5.resources
+D:\Прога\GunShopProject\GunShop.Infrastructure.Data\obj\Debug\GunShop.Infrastructure.Data.Migrations.DbV6.resources
+D:\Прога\GunShopProject\GunShop.Infrastructure.Data\obj\Debug\GunShop.Infrastructure.Data.Migrations.DbV7.resources
+D:\Прога\GunShopProject\GunShop.Infrastructure.Data\obj\Debug\GunShop.Infrastructure.Data.Migrations.DbV8.resources
+D:\Прога\GunShopProject\GunShop.Infrastructure.Data\obj\Debug\GunShop.Infrastructure.Data.Migrations.DbV9.resources

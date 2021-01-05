@@ -7,6 +7,7 @@ using GunShop.Domain.Core;
 using GunShop.Domai.Interfaces;
 using GunShop.Services.Interfaces;
 using GunShop.Models;
+using GunShop.Infrastructure.Data;
 
 namespace GunShop.Controllers
 {
@@ -46,18 +47,22 @@ namespace GunShop.Controllers
             model._Gun.Price = price.CalculatePrice(model._Gun);
             return View(model);
         }
+      
         public ActionResult BuyGun(BuyModel model)
         {
+           
             var order = new Order();
+            var rep = new Gun();
             order.FirstName = model.FirstName;
             order.LastName = model.LastName;
             order.GunId = model.GunId;
+            rep.InStock = model.inStock;
             this.order.Create(order);
-            Gun gun = repo.GetGun(model.GunId);         
-            repo.Remove(gun);
+            Gun gun = repo.GetGun(model.GunId);
+            Gun inStock = repo.GetGun(model.inStock);
+            repo.UpdateCount(gun,inStock);
             return RedirectToAction("Index", "Gun");
         }
-       
-       
+
     }
 }

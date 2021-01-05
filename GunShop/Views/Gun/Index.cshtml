@@ -4,7 +4,8 @@
     ViewBag.Title = "Index";
 }
     <head>
-        <script type = "text/javascript">
+        <script 
+                type = "text/javascript">
             function SearchScript() {
                 var input, filter, ul, li, a, i;
                 input = document.getElementById("mySearch");
@@ -20,11 +21,17 @@
                     }
                 }
             }
+
 </script>
     </head>
-
-    <body>
-        <h2>Available guns</h2>
+<style>
+    h {
+        font-family: 'Times New Roman', Times, serif; /* Шрифт с засечками */
+        font-style: italic; /* Курсивное начертание */
+    }
+</style>
+    <body>     
+        <h2>Search section</h2>
         <input type="text" id="mySearch" onkeyup="SearchScript()" placeholder="Search.." title="Type in a category">
         <ul id="myMenu">
             <li><a href="@Url.Action("Warehouses","Warehouse")">Warehouses</a></li>
@@ -33,10 +40,12 @@
 
         </ul>
         <link rel="stylesheet" href="~/Content/Search.css">
+        <h2>Available guns</h2>
+
 
         @foreach (var gun in Model.Guns)
         {
-            <h>@gun.Value.Type </h>
+            <h>@gun.Value.Type in warehouse @gun.Value.InStock </h>
             @Html.ActionLink("Buy", "GunPage", new { id = gun.Value.Id })
             <br />
         }

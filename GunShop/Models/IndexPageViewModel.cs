@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using GunShop.Infrastructure.Data;
 using GunShop.Domain.Core;
-
+using GunShop.Domain.Core.OrderAggregate;
 
 namespace GunShop.Models
 {
@@ -16,6 +16,8 @@ namespace GunShop.Models
         public List<Gun> Gun { get; set; }
         public Dictionary<int,Gun > Guns { get; set; }
         public Dictionary<int, Warehouse> Ware { get; set; }
+        public List<PriceComponent> PriceComponents { get; set; }
+        
 
     }
 }

@@ -1,4 +1,6 @@
 ﻿using GunShop.Domain.Core;
+using GunShop.Domain.Core.OrderAggregate;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,5 +12,6 @@ namespace GunShop.Services.Interfaces
     public interface IPriceCalculation
     {
         Decimal CalculatePrice(Gun gun);
+        List<PriceComponent> CalculatePrices(PriceCalculationParameters parameters);
     }
 }

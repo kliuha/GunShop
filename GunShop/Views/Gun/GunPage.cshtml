@@ -7,6 +7,12 @@
 <h2>GunPage</h2>
 <h1>@Model._Gun.Type</h1>
 <h1>@Model._Gun.Price  $</h1>
+<h4>Price:</h4>
+
+@foreach (var pc in Model.PriceComponents)
+{
+<span>@pc.Name:@pc.Value$</span>
+<br />}
 @using (Html.BeginForm("BuyGun", "Gun"))
 {
     <input type="hidden" value="@Model._Gun.Id" name="GunID" id="GunID" />
@@ -18,6 +24,18 @@
         <tr>
             <td>Last Name</td>
             <td><input type="text" name="LastName" id="LastName" /></td>
+        </tr>
+        <tr>
+            <td>Tracer</td>
+            <td>@Html.CheckBox("Tracer")</td>
+        </tr>
+        <tr>
+            <td>Hollowpoint</td>
+            <td>@Html.CheckBox("Hollowpoint")</td>
+        </tr>
+        <tr>
+            <td>Incendiary</td>
+            <td>@Html.CheckBox("Incendiary")</td>
         </tr>
     </table>
     <input type="submit" value="submit" />

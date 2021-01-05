@@ -9,3 +9,5 @@ D:\Прога\GunShopProject\GunShop.Infrastructure.Bussiness\obj\Debug\GunShop.
 D:\Прога\GunShopProject\GunShop.Infrastructure.Bussiness\obj\Debug\GunShop.Infrastructure.Bussiness.csproj.CopyComplete
 D:\Прога\GunShopProject\GunShop.Infrastructure.Bussiness\obj\Debug\GunShop.Infrastructure.Bussiness.dll
 D:\Прога\GunShopProject\GunShop.Infrastructure.Bussiness\obj\Debug\GunShop.Infrastructure.Bussiness.pdb
+D:\Прога\GunShopProject\GunShop.Infrastructure.Bussiness\bin\Debug\GunShop.Domai.Interfaces.dll
+D:\Прога\GunShopProject\GunShop.Infrastructure.Bussiness\bin\Debug\GunShop.Domai.Interfaces.pdb

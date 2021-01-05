@@ -45,6 +45,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\GunShop.Domai.Interfaces\GunShop.Domai.Interfaces.csproj">
+      <Project>{3943284D-240E-4771-B291-DB93E33A3D0A}</Project>
+      <Name>GunShop.Domai.Interfaces</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GunShop.Domain.Core\GunShop.Domain.Core.csproj">
       <Project>{2e7ba40f-86d5-4d09-9fe2-533dec689dfe}</Project>
       <Name>GunShop.Domain.Core</Name>
