@@ -25,31 +25,42 @@
 </script>
     </head>
 <style>
-    h {
-        font-family: 'Times New Roman', Times, serif; /* Шрифт с засечками */
-        font-style: italic; /* Курсивное начертание */
+h { font-family: 'lucida console', Times, serif; /* Шрифт с засечками */
+    font-style: normal; /* Курсивное начертание */ }
+</style>
+<style>
+    p {
+        border: 1px solid black;
+        padding: 5px;
     }
 </style>
-    <body>     
-        <h2>Search section</h2>
-        <input type="text" id="mySearch" onkeyup="SearchScript()" placeholder="Search.." title="Type in a category">
-        <ul id="myMenu">
-            <li><a href="@Url.Action("Warehouses","Warehouse")">Warehouses</a></li>
-            <li><a href="@Url.Action("Index","Gun")">Guns</a></li>
-            <li><a href="@Url.Action("Contact","Gun")">Contact</a></li>
+<body>
+    <h2>Search section</h2>
+    <input type="text" id="mySearch" onkeyup="SearchScript()" placeholder="Search.." title="Type in a category">
+    <ul id="myMenu">
+        <li><a href="@Url.Action("Warehouses","Warehouse")">Warehouses</a></li>
+        <li><a href="@Url.Action("Index","Gun")">Guns</a></li>
+        <li><a href="@Url.Action("Contact","Gun")">Contact</a></li>
 
-        </ul>
-        <link rel="stylesheet" href="~/Content/Search.css">
-        <h2>Available guns</h2>
+    </ul>
+    <link rel="stylesheet" href="~/Content/Search.css">
+    <h2>Available guns</h2>
 
-
-        @foreach (var gun in Model.Guns)
+    @using (Html.BeginForm("GunPage", "Gun"))
+    {
+        
+        foreach (var gun in Model.Guns)
         {
-            <h>@gun.Value.Type in warehouse @gun.Value.InStock </h>
-            @Html.ActionLink("Buy", "GunPage", new { id = gun.Value.Id })
+
+            <h>@gun.Value.Type </h>
+            <h5> in warehouse @gun.Value.InStock </h5>            
+            <p>
+                @Html.ActionLink("Buy", "GunPage", new { Id = gun.Value.Id })
+            </p>
             <br />
         }
-    </body>
+    }
+</body>
        
 
 

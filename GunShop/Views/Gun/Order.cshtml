@@ -1,0 +1,15 @@
+﻿@model GunShop.Models.BuyModel
+
+@{ ViewBag.Title = "Order details"; }
+
+<h2>Gun @Model.Gun.Type </h2>
+<
+
+
+<h4>Additional bullets:</h4>
+@foreach (var pc in Model.PriceComponents.ToList())
+{
+<span>@pc.Name:@pc.Value$</span>
+                <br />}
+
+<h5>Total Price: @Model.PriceComponents.Select(x => x.Value).Sum(); </h5>

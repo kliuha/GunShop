@@ -14,7 +14,7 @@ namespace GunShop.Domai.Interfaces
         void Create(Gun gun);
         void Remove(Gun gun);
         List<Gun> SelectionByWarehouse(int id);
-        void UpdateCount(Gun gun,Gun inStock);
+        void UpdateCount(Gun gun);
          Gun GetPrice(decimal price);
     }
 }

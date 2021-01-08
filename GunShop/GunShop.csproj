@@ -145,7 +145,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Start\AmmunitionPriceStrategy.cs" />
+    <Compile Include="App_Start\AmmunitionPriceCalculation.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -157,6 +157,7 @@
     </Compile>
     <Compile Include="Models\BuyModel.cs" />
     <Compile Include="Models\IndexPageViewModel.cs" />
+    <Compile Include="Models\OrderViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Util\NinjectRegistration.cs" />
   </ItemGroup>
@@ -200,6 +201,7 @@
     <Content Include="Views\Gun\Index.cshtml" />
     <Content Include="Views\Gun\GunPage.cshtml" />
     <Content Include="Views\Warehouse\WarehouseGuns.cshtml" />
+    <Content Include="Views\Gun\Order.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

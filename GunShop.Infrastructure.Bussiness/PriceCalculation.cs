@@ -26,25 +26,15 @@ namespace GunShop.Infrastructure.Bussiness
 
         public List<PriceComponent> CalculatePrices(PriceCalculationParameters parameters)
         {
+            var components = new List<PriceComponent>();
+            var gun = _gunRepository.GetGun(parameters.gun.Id);
+            var guncomponent = new PriceComponent() { Name = "Main" };
+            guncomponent.Value = gun.Price;
+            components.Add(guncomponent);
 
-            var gun = _gunRepository.GetPrice(parameters.gun.Price);            
+            return components;
 
-            var newPriceComponents = new List<PriceComponent>();
-
-            if (parameters.Tracer == true)
-            {
-                newPriceComponents.Add(new PriceComponent { Name = "Tracet", Value = 100 });
-            }
-            if (parameters.Hollowpoint == true)
-            {
-                newPriceComponents.Add(new PriceComponent { Name = "Hollowpoint", Value = 110 });
-            }
-
-            if (parameters.Incendiary == true )
-            {
-                newPriceComponents.Add(new PriceComponent { Name = "Incendiary", Value = 120 });
-            }
-            return newPriceComponents;
+            
         }
     }
 }

@@ -44,12 +44,14 @@ namespace GunShop.Infrastructure.Data
             
             return guns.ToList();           
         }
-        public void UpdateCount(Gun gun,Gun inStock)
+        public void UpdateCount(Gun gun)
         {           
             db.Guns.Attach(gun);
             db.Entry(gun).Property(x => x.InStock).IsModified = true;
-            gun.InStock = gun.InStock - 1;           
-            db.SaveChanges();
+                gun.InStock = gun.InStock - 1;
+                db.SaveChanges();
+                                
+                      
         }
         public Gun GetPrice(decimal price)
         {

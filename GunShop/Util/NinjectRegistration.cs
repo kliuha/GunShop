@@ -40,6 +40,7 @@ using Ninject.Web.Common.WebHost;
                         kernel.Bind<IPriceCalculation>().To<PriceCalculation>();
                         kernel.Bind<IOrderRepository>().To<OrderRepository>();
                         kernel.Bind<IWarehouseRepository>().To<WarehouseRepository>();
+                        kernel.Bind<IOrderService>().To<OrderService>();
                         return kernel;
                     }
 
