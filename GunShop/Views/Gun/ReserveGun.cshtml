@@ -1,0 +1,43 @@
+﻿@model GunShop.Models.ReservationViewModel
+
+<h2>Gun @Model.gun.Type</h2>
+<h4>Reserve starts at @Model.Date.ToString("dd.MM.yy hh:mm")</h4>
+
+<h2>the gun @Model.gun.Type is reserved for you for</h2>
+
+<h4>Price:</h4>
+
+@foreach (var pc in Model.PriceComponents)
+{
+    <span>@pc.Name:@pc.Value$</span>
+    <br />
+}
+
+@using (Html.BeginForm("GunPage", "Gun", FormMethod.Post))
+{
+    <input type="hidden" value="@Model.gun.Id" name="Id" />
+    <input type="hidden" value="@Model.Reservation.Id" name="resId" />
+    <table>
+        <tr>
+            <td>First Name</td>
+            <td><input type="text" name="firstName" /></td>
+        </tr>
+        <tr>
+            <td>Last Name</td>
+            <td><input type="text" name="lastName" /></td>
+        </tr>
+        <tr>
+            <td>Tracer</td>         
+            <td>@Html.CheckBox("Tracer")</td>
+        </tr>
+        <tr>
+            <td>Hollowpoint</td>
+            <td>@Html.CheckBox("Hollowpoint")</td>
+        </tr>
+        <tr>
+            <td>Incendiary</td>
+            <td>@Html.CheckBox("Incendiary")</td>
+        </tr>
+    </table>
+    <input type="submit" value="submit" />
+}

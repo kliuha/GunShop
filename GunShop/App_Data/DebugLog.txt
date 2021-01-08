@@ -1,0 +1,25 @@
+Info[08.01.2021 14:04:32]: Successfully make a reservation for a gun with Id 7, type 650,00 and price Kar98k.
+Info[08.01.2021 14:25:49]: Successfully make a reservation for a gun with Id 7, type 650,00 and price Kar98k.
+Info[08.01.2021 14:27:06]: Successfully make a reservation for a gun with Id 9, type 1200,00 and price M4A1.
+Info[08.01.2021 14:28:10]: Successfully make a reservation for a gun with Id 10, type 500,00 and price AWP.
+Info[08.01.2021 14:29:25]: Successfully make a reservation for a gun with Id 11, type 750,00 and price AK-47Y.
+Info[08.01.2021 14:37:52]: Successfully make a reservation for a gun with Id 13, type 430,00 and price Glock-18.
+Info[08.01.2021 14:41:39]: Successfully make a reservation for a gun with Id 14, type 560,00 and price USP-S.
+Info[08.01.2021 14:47:31]: Successfully make a reservation for a gun with Id 15, type 350,00 and price .44Magnum.
+Info[08.01.2021 14:49:12]: Successfully make a reservation for a gun with Id 9, type 1200,00 and price M4A1.
+Info[08.01.2021 15:06:50]: Successfully make a reservation for a gun with Id 7, type 650,00 and price Kar98k.
+Info[08.01.2021 15:09:32]: Successfully make a reservation for a gun with Id 9, type 1200,00 and price M4A1.
+Info[08.01.2021 15:11:44]: Successfully make a reservation for a gun with Id 13, type 430,00 and price Glock-18.
+Info[08.01.2021 15:13:28]: Successfully make a reservation for a gun with Id 10, type 500,00 and price AWP.
+Info[08.01.2021 15:28:22]: Successfully make a reservation for a gun with Id 7, type 650,00 and price Kar98k.
+Info[08.01.2021 15:32:55]: Successfully make a reservation for a gun with Id 13, type 430,00 and price Glock-18.
+Info[08.01.2021 15:33:50]: Successfully make a reservation for a gun with Id 9, type 1200,00 and price M4A1.
+Info[08.01.2021 15:34:05]: Successfully make a reservation for a gun with Id 14, type 560,00 and price USP-S.
+Info[08.01.2021 15:39:56]: Successfully make a reservation for a gun with Id 10, type 500,00 and price AWP.
+Info[08.01.2021 15:40:00]: Successfully remove a reservation for a gun with reservation Id 18 for gun Id 10 with order Id .
+Info[08.01.2021 15:40:04]: Successfully make a reservation for a gun with Id 10, type 500,00 and price AWP.
+Info[08.01.2021 15:40:10]: Successfully remove a reservation for a gun with reservation Id 19 for gun Id 10 with order Id .
+Info[08.01.2021 15:43:58]: Successfully make a reservation for a gun with Id 15, type 350,00 and price .44Magnum.
+Info[08.01.2021 15:44:02]: Successfully remove a reservation for a gun with reservation Id 20 for gun Id 15 with order Id .
+Info[08.01.2021 16:08:30]: Successfully make a reservation for a gun with Id 7, type 650,00 and price Kar98k.
+Info[08.01.2021 16:08:33]: Successfully remove a reservation for a gun with reservation Id 21 for gun Id 7 with order Id .

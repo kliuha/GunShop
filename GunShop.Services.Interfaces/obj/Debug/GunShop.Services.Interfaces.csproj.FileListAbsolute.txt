@@ -7,3 +7,12 @@ D:\Прога\GunShopProject\GunShop.Services.Interfaces\obj\Debug\GunShop.Servi
 D:\Прога\GunShopProject\GunShop.Services.Interfaces\obj\Debug\GunShop.Services.Interfaces.csproj.CopyComplete
 D:\Прога\GunShopProject\GunShop.Services.Interfaces\obj\Debug\GunShop.Services.Interfaces.dll
 D:\Прога\GunShopProject\GunShop.Services.Interfaces\obj\Debug\GunShop.Services.Interfaces.pdb
+D:\gungun\GunShop-master\GunShop.Services.Interfaces\bin\Debug\GunShop.Services.Interfaces.dll
+D:\gungun\GunShop-master\GunShop.Services.Interfaces\bin\Debug\GunShop.Services.Interfaces.pdb
+D:\gungun\GunShop-master\GunShop.Services.Interfaces\bin\Debug\GunShop.Domain.Core.dll
+D:\gungun\GunShop-master\GunShop.Services.Interfaces\bin\Debug\GunShop.Domain.Core.pdb
+D:\gungun\GunShop-master\GunShop.Services.Interfaces\obj\Debug\GunShop.Services.Interfaces.csprojAssemblyReference.cache
+D:\gungun\GunShop-master\GunShop.Services.Interfaces\obj\Debug\GunShop.Services.Interfaces.csproj.CoreCompileInputs.cache
+D:\gungun\GunShop-master\GunShop.Services.Interfaces\obj\Debug\GunShop.Services.Interfaces.csproj.CopyComplete
+D:\gungun\GunShop-master\GunShop.Services.Interfaces\obj\Debug\GunShop.Services.Interfaces.dll
+D:\gungun\GunShop-master\GunShop.Services.Interfaces\obj\Debug\GunShop.Services.Interfaces.pdb

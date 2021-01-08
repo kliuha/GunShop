@@ -7,3 +7,12 @@ D:\Прога\GunShopProject\GunShop.Domai.Interfaces\obj\Debug\GunShop.Domai.In
 D:\Прога\GunShopProject\GunShop.Domai.Interfaces\obj\Debug\GunShop.Domai.Interfaces.csproj.CopyComplete
 D:\Прога\GunShopProject\GunShop.Domai.Interfaces\obj\Debug\GunShop.Domai.Interfaces.dll
 D:\Прога\GunShopProject\GunShop.Domai.Interfaces\obj\Debug\GunShop.Domai.Interfaces.pdb
+D:\gungun\GunShop-master\GunShop.Domai.Interfaces\bin\Debug\GunShop.Domai.Interfaces.dll
+D:\gungun\GunShop-master\GunShop.Domai.Interfaces\bin\Debug\GunShop.Domai.Interfaces.pdb
+D:\gungun\GunShop-master\GunShop.Domai.Interfaces\bin\Debug\GunShop.Domain.Core.dll
+D:\gungun\GunShop-master\GunShop.Domai.Interfaces\bin\Debug\GunShop.Domain.Core.pdb
+D:\gungun\GunShop-master\GunShop.Domai.Interfaces\obj\Debug\GunShop.Domai.Interfaces.csprojAssemblyReference.cache
+D:\gungun\GunShop-master\GunShop.Domai.Interfaces\obj\Debug\GunShop.Domai.Interfaces.csproj.CoreCompileInputs.cache
+D:\gungun\GunShop-master\GunShop.Domai.Interfaces\obj\Debug\GunShop.Domai.Interfaces.csproj.CopyComplete
+D:\gungun\GunShop-master\GunShop.Domai.Interfaces\obj\Debug\GunShop.Domai.Interfaces.dll
+D:\gungun\GunShop-master\GunShop.Domai.Interfaces\obj\Debug\GunShop.Domai.Interfaces.pdb

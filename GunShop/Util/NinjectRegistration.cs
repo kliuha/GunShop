@@ -14,6 +14,7 @@ using Ninject;
 using Ninject.Web.Common.WebHost;
     using System;
     using System.Web;
+    using GunShop.App_Start;
 
     public class NinjectRegistration : NinjectModule
     {
@@ -37,11 +38,23 @@ using Ninject.Web.Common.WebHost;
                         kernel.Bind<IHttpModule>().To<HttpApplicationInitializationHttpModule>();
 
                         kernel.Bind<IGunRepository>().To<GunRepository>();
-                        kernel.Bind<IPriceCalculation>().To<PriceCalculation>();
+                        //kernel.Bind<IPriceCalculation>().To<PriceCalculation>();
                         kernel.Bind<IOrderRepository>().To<OrderRepository>();
                         kernel.Bind<IWarehouseRepository>().To<WarehouseRepository>();
-                        kernel.Bind<IOrderService>().To<OrderService>();
-                        return kernel;
+                        kernel.Bind<IReservationRepository>().To<ReservationRepository>();
+                        kernel.Bind<IReservationService>().To<ReservationLoggingDecorator>();
+                        kernel.Bind<IReservationService>().To<ReservationService>().WhenInjectedExactlyInto<ReservationLoggingDecorator>();
+                        kernel.Bind<IPriceCalculation>().ToMethod<FinalPriceCalculationStrategy>(ctx =>
+                    {
+                        return new FinalPriceCalculationStrategy(new System.Collections.Generic.List<IPriceCalculation>() {
+                            ctx.Kernel.Get<PriceCalculation>(),
+                            ctx.Kernel.Get<AmmunitionPriceStrategy>()
+                    });
+
+                    });
+                        kernel.Bind<ILogger>().ToMethod(x =>
+                            new Logger(HttpContext.Current.Server.MapPath("~/App_Data")));
+                return kernel;
                     }
 
                     catch

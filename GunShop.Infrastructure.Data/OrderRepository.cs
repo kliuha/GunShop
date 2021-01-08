@@ -35,5 +35,11 @@ namespace GunShop.Infrastructure.Data
             return db.Orders.ToList();
            
         }
+        public void Update (Order order)
+        {
+            db.Orders.Attach(order);
+            db.Entry(order).State = System.Data.Entity.EntityState.Modified;
+            db.SaveChanges();
+        }
     }
 }

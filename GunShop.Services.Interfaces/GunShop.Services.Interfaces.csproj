@@ -41,8 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IOrderService.cs" />
+    <Compile Include="ILogger.cs" />
     <Compile Include="IPriceCalculation.cs" />
+    <Compile Include="IReservationService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

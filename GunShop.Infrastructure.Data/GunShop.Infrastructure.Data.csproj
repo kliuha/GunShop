@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GunRepository.cs" />
+    <Compile Include="Logger.cs" />
     <Compile Include="Migrations\202012161629287_DbV1.cs" />
     <Compile Include="Migrations\202012161629287_DbV1.designer.cs">
       <DependentUpon>202012161629287_DbV1.cs</DependentUpon>
@@ -88,10 +89,20 @@
     <Compile Include="Migrations\202101042230521_DbV9.designer.cs">
       <DependentUpon>202101042230521_DbV9.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202101071122011_DbV10.cs" />
+    <Compile Include="Migrations\202101071122011_DbV10.designer.cs">
+      <DependentUpon>202101071122011_DbV10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101081342486_DbV11.cs" />
+    <Compile Include="Migrations\202101081342486_DbV11.designer.cs">
+      <DependentUpon>202101081342486_DbV11.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="OrderContext.cs" />
     <Compile Include="OrderRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReservationRepository.cs" />
+    <Compile Include="ReservationService.cs" />
     <Compile Include="WarehouseRepository.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -102,6 +113,10 @@
     <ProjectReference Include="..\GunShop.Domain.Core\GunShop.Domain.Core.csproj">
       <Project>{2e7ba40f-86d5-4d09-9fe2-533dec689dfe}</Project>
       <Name>GunShop.Domain.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GunShop.Services.Interfaces\GunShop.Services.Interfaces.csproj">
+      <Project>{5D3FF4AB-2E00-414D-B81C-C0F933F81BC0}</Project>
+      <Name>GunShop.Services.Interfaces</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -135,6 +150,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202101042230521_DbV9.resx">
       <DependentUpon>202101042230521_DbV9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101071122011_DbV10.resx">
+      <DependentUpon>202101071122011_DbV10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101081342486_DbV11.resx">
+      <DependentUpon>202101081342486_DbV11.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -19,22 +19,18 @@ namespace GunShop.Infrastructure.Bussiness
 
             _gunRepository = gunRepository;
         }
-        public Decimal CalculatePrice(Gun gun)
-        {
-            return gun.Price;
-        }
+       
 
-        public List<PriceComponent> CalculatePrices(PriceCalculationParameters parameters)
+        public List<PriceComponent> CalculatePrice(PriceCalculationParameters parameters)
         {
+
             var components = new List<PriceComponent>();
-            var gun = _gunRepository.GetGun(parameters.gun.Id);
-            var guncomponent = new PriceComponent() { Name = "Main" };
-            guncomponent.Value = gun.Price;
-            components.Add(guncomponent);
 
+            var gun = _gunRepository.GetGun(parameters.gun.Id);          
+            var placeComponent = new PriceComponent() { Name = "Main price" };
+            placeComponent.Value = gun.Price;
+            components.Add(placeComponent);
             return components;
-
-            
         }
     }
 }

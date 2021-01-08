@@ -17,9 +17,7 @@ namespace GunShop.Models
         public Dictionary<int,Gun > Guns { get; set; }
         public Dictionary<int, Warehouse> Ware { get; set; }
         public List<PriceComponent> PriceComponents { get; set; }
-        public bool Tracer { get; set; }
-        public bool Hollowpoint { get; set; }
-        public bool Incendiary { get; set; }
+        public List<int> ReservedGuns { get; set; }
 
     }
 }

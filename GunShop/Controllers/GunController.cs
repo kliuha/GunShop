@@ -6,7 +6,6 @@ using System.Web.Mvc;
 using GunShop.Domain.Core;
 using GunShop.Domai.Interfaces;
 using GunShop.Services.Interfaces;
-
 using GunShop.Models;
 using GunShop.Infrastructure.Data;
 
@@ -17,83 +16,85 @@ namespace GunShop.Controllers
         private IGunRepository repo;
         private IPriceCalculation price;
         private IOrderRepository order;
-        private IOrderService serv;
-        public GunController(IGunRepository r, IPriceCalculation p, IOrderRepository o,IOrderService s)
+        private IReservationService resserv;
+        private IReservationRepository resrepo;
+        public GunController(IGunRepository r, IPriceCalculation p,IOrderRepository o,IReservationService rs,IReservationRepository rr)
         {
             repo = r;
             price = p;
             order = o;
-            serv = s;
-        }
-        public ActionResult Index()
-        {
-            var model = new IndexPageViewModel()
-            {
-
-                Guns = repo.GetAllGuns().ToDictionary(x => x.Id)
-            };
-            return View(model);
+            resserv = rs;
+            resrepo = rr;
         }
         public ActionResult Contact()
         {
             return View();
         }
+        
+        public ActionResult Index()
+        {
+            var ggun = repo.GetAllGuns();
+            var model = new IndexPageViewModel()
+            {
 
-      
-        public ActionResult GunPage(int Id )
-       {
-            
+                Guns = repo.GetAllGuns().ToDictionary(x => x.Id),
+                ReservedGuns = ggun.Where(p => resserv.GunIsOccupied(p)).Select(p => p.Id).ToList()
+            };
+            return View(model);
+        }
+       public ActionResult ReserveGun(int gunId)
+        {
+            var ggun = repo.GetGun(gunId);
+            var date = DateTime.Now;
+            var parameters = new PriceCalculationParameters()
+            {
+                gun = ggun
+            };
+
+            var reservation = resserv.Reserve(ggun);
+
+            var model = new ReservationViewModel()
+            {
+                Reservation = reservation,
+                gun = ggun,
+                PriceComponents = price.CalculatePrice(parameters),
+                Date = date,              
+            };
+            return View(model);
+        }
+
+        public ActionResult GunPage(int Id,bool Tracer ,bool Hollowpoint,bool Incendiary,string firstName, string lastName,int resId)
+        {
             var ggun = repo.GetGun(Id);
             var parameters = new PriceCalculationParameters()
             {
-                
-                gun = ggun
+                gun = ggun,
+                Tracer = Tracer,
+                Hollowpoint = Hollowpoint,
+                Incendiary = Incendiary
             };
             var model = new IndexPageViewModel()
             {
 
                 _Gun = repo.GetGun(Id),
-                
-                PriceComponents = price.CalculatePrices(parameters)
+                PriceComponents = price.CalculatePrice(parameters)
             };
-           
-                return View(model);
-       }
-        //public ActionResult Order(int Id)
-        //{
-        //    var orderr = order.Get(Id);
-        //    var gun = repo.GetGun(orderr.GunId);
-        //    var ordertWM = new OrderViewModel();
-        //    ordertWM.Order = orderr;
-        //    ordertWM.Gun = gun;                   
-        //    return View();
-        //}
-
-        public ActionResult BuyGun(BuyModel model)
-        {
-           
             var order = new Order();
-            var rep = new Gun();
-            order.FirstName = model.FirstName;
-            order.LastName = model.LastName;
-            order.GunId = model.GunId;          
-            rep.InStock = model.inStock;
+            order.FirstName = firstName;
+            order.LastName = lastName;
+            order.GunId = Id;
             this.order.Create(order);
-            Gun ggun = repo.GetGun(model.GunId);
-            //var parameters = new PriceCalculationParameters()
-            //{
-            //    Tracer = model.Tracer,
-            //    Hollowpoint = model.Hollowpoint,
-            //    Incendiary = model.Incendiary,
-            //    gun = ggun
-            //};
-            //var ord = serv.CreateOrder(model.OrderId,
-            //                                  model.FirstName,
-            //                                  model.LastName,
-            //                                  parameters);
-            repo.UpdateCount(ggun);
-            
-            return RedirectToAction("Index","Gun");
+            Gun gun = repo.GetGun(Id);
+            repo.UpdateCount(gun);
+            Reservation reservation = resrepo.Get(resId);
+            resserv.RemoveReservation(reservation);
+            return View(model);
+        }
+      
+        public ActionResult BuyGun()
+        {
+            return RedirectToAction("Index", "Gun");
+
         }
 
     }

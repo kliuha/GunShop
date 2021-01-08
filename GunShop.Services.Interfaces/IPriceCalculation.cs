@@ -10,8 +10,7 @@ using System.Threading.Tasks;
 namespace GunShop.Services.Interfaces
 {
     public interface IPriceCalculation
-    {
-        Decimal CalculatePrice(Gun gun);
-        List<PriceComponent> CalculatePrices(PriceCalculationParameters parameters);
+    {      
+        List<PriceComponent> CalculatePrice(PriceCalculationParameters parameters);
     }
 }

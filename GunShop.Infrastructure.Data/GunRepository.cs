@@ -48,10 +48,8 @@ namespace GunShop.Infrastructure.Data
         {           
             db.Guns.Attach(gun);
             db.Entry(gun).Property(x => x.InStock).IsModified = true;
-                gun.InStock = gun.InStock - 1;
-                db.SaveChanges();
-                                
-                      
+            gun.InStock = gun.InStock - 1;           
+            db.SaveChanges();
         }
         public Gun GetPrice(decimal price)
         {

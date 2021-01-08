@@ -1,38 +1,12 @@
 ﻿@model GunShop.Models.IndexPageViewModel
 
-@{
-    ViewBag.Title = "GunPage";
-}
-
-<h2>GunPage</h2>
-<h1>@Model._Gun.Type</h1>
+<h2>Gun @Model._Gun.Type</h2>
 
 <h4>Price:</h4>
-<h4>
-    @foreach (var pc in Model.PriceComponents)
-    {
-        <span>@pc.Name:@pc.Value$</span>
-        <br />
-    }
-</h4>
-
-<h5>Total Price: @Model.PriceComponents.Select(x => x.Value).Sum()$ </h5>
-
-@using (Html.BeginForm("BuyGun", "Gun"))
+@foreach (var pc in Model.PriceComponents)
 {
-    <input type="hidden" value="@Model._Gun.Id" name="GunID" id="GunID" />
-    <table>
-        <tr>
-            <td>First Name</td>
-            <td><input type="text" name="FirstName" id="FirstName" /></td>
-        </tr>
-        <tr>
-            <td>Last Name</td>
-            <td><input type="text" name="LastName" id="LastName" /></td>
-        </tr>
-        <tr>Choose type of bullets: </tr>
-            Tracer  @Html.CheckBox("Tracer")  Hollowpoint @Html.CheckBox("Hollowpoint")  Incendiary @Html.CheckBox("Incendiary")
-
-    </table>
-    <input type="submit" value="submit" />
+    <span>@pc.Name:@pc.Value$</span>
+    <br />
 }
+<h5>Total Price: @Model.PriceComponents.Select(x => x.Value).Sum()$ </h5>
+@Html.ActionLink("Return", "BuyGun")

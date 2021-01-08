@@ -25,13 +25,9 @@
 </script>
     </head>
 <style>
-h { font-family: 'lucida console', Times, serif; /* Шрифт с засечками */
-    font-style: normal; /* Курсивное начертание */ }
-</style>
-<style>
-    p {
-        border: 1px solid black;
-        padding: 5px;
+    h {
+        font-family: 'Times New Roman', Times, serif; /* Шрифт с засечками */
+        font-style: italic; /* Курсивное начертание */
     }
 </style>
 <body>
@@ -44,22 +40,23 @@ h { font-family: 'lucida console', Times, serif; /* Шрифт с засечка
 
     </ul>
     <link rel="stylesheet" href="~/Content/Search.css">
+  <div>
     <h2>Available guns</h2>
 
-    @using (Html.BeginForm("GunPage", "Gun"))
-    {
-        
-        foreach (var gun in Model.Guns)
-        {
 
-            <h>@gun.Value.Type </h>
-            <h5> in warehouse @gun.Value.InStock </h5>            
-            <p>
-                @Html.ActionLink("Buy", "GunPage", new { Id = gun.Value.Id })
-            </p>
-            <br />
-        }
-    }
+            @foreach (var gun in Model.Guns) {
+
+            <h>@gun.Value.Type in warehouse @gun.Value.InStock </h>
+                if (Model.ReservedGuns.Contains(gun.Value.Id))
+                {
+             @gun.Value.Id;
+                }
+                else {
+  <a href="@Url.Action("ReserveGun", new { gunId = gun.Value.Id })" > Choose </a>
+                 }           
+   }
+  </div>}
+    
 </body>
        
 
