@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace GunShop.App_Start
+namespace GunShop.Infrastructure.Bussiness
 {
     public class FinalPriceCalculationStrategy : IPriceCalculation
     {

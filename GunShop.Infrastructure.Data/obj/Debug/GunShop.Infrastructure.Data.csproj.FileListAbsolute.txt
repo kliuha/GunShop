@@ -54,3 +54,8 @@ D:\gungun\GunShop-master\GunShop.Infrastructure.Data\obj\Debug\GunShop.Infrastru
 D:\gungun\GunShop-master\GunShop.Infrastructure.Data\bin\Debug\GunShop.Services.Interfaces.dll
 D:\gungun\GunShop-master\GunShop.Infrastructure.Data\bin\Debug\GunShop.Services.Interfaces.pdb
 D:\gungun\GunShop-master\GunShop.Infrastructure.Data\obj\Debug\GunShop.Infrastructure.Data.Migrations.DbV11.resources
+D:\Прога\GunShopProject\GunShop.Infrastructure.Data\bin\Debug\GunShop.Services.Interfaces.dll
+D:\Прога\GunShopProject\GunShop.Infrastructure.Data\bin\Debug\GunShop.Services.Interfaces.pdb
+D:\Прога\GunShopProject\GunShop.Infrastructure.Data\obj\Debug\GunShop.Infrastructure.Data.Migrations.DbV10.resources
+D:\Прога\GunShopProject\GunShop.Infrastructure.Data\obj\Debug\GunShop.Infrastructure.Data.Migrations.DbV11.resources
+D:\Прога\GunShopProject\GunShop.Infrastructure.Data\obj\Debug\GunShop.Infrastructure.Data.Migrations.DbV12.resources

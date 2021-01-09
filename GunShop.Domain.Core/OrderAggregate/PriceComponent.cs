@@ -12,6 +12,6 @@ namespace GunShop.Domain.Core.OrderAggregate
         public string Name { get; set; }
         public decimal Value { get; set; }
         public int GunId { get; set; }
-        public Gun Gun { get; set; }
+       
     }
 }

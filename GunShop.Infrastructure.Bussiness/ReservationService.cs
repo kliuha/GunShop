@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GunShop.Infrastructure.Data
+namespace GunShop.Infrastructure.Bussiness
 {
     public class ReservationService : IReservationService
     {

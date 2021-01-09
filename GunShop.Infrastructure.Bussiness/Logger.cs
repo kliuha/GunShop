@@ -8,7 +8,7 @@ using GunShop.Services.Interfaces;
 
 
 
-namespace GunShop.Infrastructure.Data
+namespace GunShop.Infrastructure.Bussiness
 {
    public class Logger : ILogger
     {

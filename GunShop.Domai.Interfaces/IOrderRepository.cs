@@ -9,8 +9,7 @@ namespace GunShop.Services.Interfaces
 {
     public interface IOrderRepository
     {
-        void Create(Order order);
-        Order Get(int id);
+        void Create(Order order);       
         List<Order> GetAllOrders();
         void Update(Order order);
 

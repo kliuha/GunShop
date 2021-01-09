@@ -14,13 +14,13 @@ namespace GunShop.Controllers
     {
         private  IGunRepository repo;
         private IPriceCalculation price;
-        private IOrderRepository order;
+        private IOrderRepository orderrep;
         private IWarehouseRepository ware;
         public WarehouseController(IGunRepository r, IPriceCalculation p, IOrderRepository o,IWarehouseRepository w)
         {
             repo = r;
             price = p;
-            order = o;
+            orderrep = o;
             ware = w;
         }
         public ActionResult Warehouses()

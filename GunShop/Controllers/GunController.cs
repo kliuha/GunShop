@@ -13,16 +13,16 @@ namespace GunShop.Controllers
 {
     public class GunController : Controller
     {
-        private IGunRepository repo;
+        private IGunRepository gunrepo;
         private IPriceCalculation price;
-        private IOrderRepository order;
+        private IOrderRepository orderrep;
         private IReservationService resserv;
         private IReservationRepository resrepo;
         public GunController(IGunRepository r, IPriceCalculation p,IOrderRepository o,IReservationService rs,IReservationRepository rr)
         {
-            repo = r;
+            gunrepo = r;
             price = p;
-            order = o;
+            orderrep = o;
             resserv = rs;
             resrepo = rr;
         }
@@ -33,18 +33,18 @@ namespace GunShop.Controllers
         
         public ActionResult Index()
         {
-            var ggun = repo.GetAllGuns();
+            var ggun = gunrepo.GetAllGuns();
             var model = new IndexPageViewModel()
             {
 
-                Guns = repo.GetAllGuns().ToDictionary(x => x.Id),
+                Guns = gunrepo.GetAllGuns().ToDictionary(x => x.Id),
                 ReservedGuns = ggun.Where(p => resserv.GunIsOccupied(p)).Select(p => p.Id).ToList()
             };
             return View(model);
         }
        public ActionResult ReserveGun(int gunId)
         {
-            var ggun = repo.GetGun(gunId);
+            var ggun = gunrepo.GetGun(gunId);
             var date = DateTime.Now;
             var parameters = new PriceCalculationParameters()
             {
@@ -65,7 +65,7 @@ namespace GunShop.Controllers
 
         public ActionResult GunPage(int Id,bool Tracer ,bool Hollowpoint,bool Incendiary,string firstName, string lastName,int resId)
         {
-            var ggun = repo.GetGun(Id);
+            var ggun = gunrepo.GetGun(Id);
             var parameters = new PriceCalculationParameters()
             {
                 gun = ggun,
@@ -76,16 +76,16 @@ namespace GunShop.Controllers
             var model = new IndexPageViewModel()
             {
 
-                _Gun = repo.GetGun(Id),
+                _Gun = gunrepo.GetGun(Id),
                 PriceComponents = price.CalculatePrice(parameters)
             };
             var order = new Order();
             order.FirstName = firstName;
             order.LastName = lastName;
             order.GunId = Id;
-            this.order.Create(order);
-            Gun gun = repo.GetGun(Id);
-            repo.UpdateCount(gun);
+            this.orderrep.Create(order);
+            Gun gun = gunrepo.GetGun(Id);
+            gunrepo.UpdateCount(gun);
             Reservation reservation = resrepo.Get(resId);
             resserv.RemoveReservation(reservation);
             return View(model);

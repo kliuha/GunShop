@@ -7,24 +7,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace GunShop.App_Start
+namespace GunShop.Infrastructure.Bussiness
 {
-    public class AmmunitionPriceCalculation : IPriceCalculation
+    public class AmmunitionPriceStrategy : IPriceCalculation
     {
         private IGunRepository _gunRepository;
-       
-
-        public AmmunitionPriceCalculation(IGunRepository gunRepository)
+        public AmmunitionPriceStrategy(IGunRepository gunRepository)
         {
+
             _gunRepository = gunRepository;
+        }
+        public List<PriceComponent> CalculatePrice(PriceCalculationParameters parameters)
+        {
 
-        }
-        public Decimal CalculatePrice(Gun gun)
-        {
-            return gun.Price;
-        }
-        public List<PriceComponent> CalculatePrices(PriceCalculationParameters parameters)
-        {
             var gun = _gunRepository.GetPrice(parameters.gun.Price);
 
             var newPriceComponents = new List<PriceComponent>();
@@ -44,5 +39,5 @@ namespace GunShop.App_Start
             }
             return newPriceComponents;
         }
-        }
+    }
 }

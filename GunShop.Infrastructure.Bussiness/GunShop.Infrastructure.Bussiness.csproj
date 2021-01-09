@@ -41,8 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AmmunitionPriceStrategy.cs" />
+    <Compile Include="FinalPriceCalculationStrategy.cs" />
+    <Compile Include="Logger.cs" />
     <Compile Include="PriceCalculation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReservationRepository.cs" />
+    <Compile Include="ReservationService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GunShop.Domai.Interfaces\GunShop.Domai.Interfaces.csproj">

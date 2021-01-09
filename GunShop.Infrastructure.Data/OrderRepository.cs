@@ -25,11 +25,7 @@ namespace GunShop.Infrastructure.Data
                 ctx.SaveChanges();
             }
         }
-        public Order Get(int id)
-        {
-            return db.Orders.Find(id);
-           
-        }
+
         public List<Order> GetAllOrders()
         {
             return db.Orders.ToList();
