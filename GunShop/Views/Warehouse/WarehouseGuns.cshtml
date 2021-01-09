@@ -8,7 +8,7 @@
 @foreach (var gun in Model.Gun)
 {
     <h>@gun.Type </h>
-    @Html.ActionLink("Buy", "GunPage", new { id = gun.Id })
+    @Html.ActionLink("Buy", "ReserveGun", new { gunid = gun.Id })
     <br />
 }
 
