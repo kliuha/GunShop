@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GunShop.Infrastructure.Bussiness
+namespace GunShop.Infrastructure.Data
 {
     public class ReservationRepository : IReservationRepository
     {
